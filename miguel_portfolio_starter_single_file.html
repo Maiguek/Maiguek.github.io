@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Miguel Ramírez — Portfolio</title>
+  <meta name="description" content="AI & Robotics portfolio — projects, videos, photos, and contact." />
+  <!-- Basic SEO/Open Graph -->
+  <meta property="og:title" content="Miguel Ramírez — Portfolio" />
+  <meta property="og:description" content="AI & Robotics portfolio — projects, videos, photos, and contact." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://maiguek.github.io" />
+  <meta property="og:image" content="https://maiguek.github.io/og-card.png" />
+
+  <style>
+    :root{
+      --bg: #0b0c10;
+      --card: #111217;
+      --text: #e8edf1;
+      --muted: #a6b0bb;
+      --accent: #3aa7ff;
+      --accent-2: #8b5cf6;
+      --border: #1b1d24;
+      --shadow: 0 10px 30px rgba(0,0,0,.3);
+    }
+    @media (prefers-color-scheme: light){
+      :root{ --bg:#f6f7fb; --card:#ffffff; --text:#0e141b; --muted:#5a6570; --border:#e8eaf0; --shadow:0 10px 20px rgba(0,0,0,.08); }
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Inter,Arial,sans-serif}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1100px;margin-inline:auto;padding:24px}
+    header{position:sticky;top:0;background:color-mix(in srgb, var(--bg) 80%, transparent);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--border);z-index:10}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .nav a{font-weight:600}
+    .nav .links{display:flex;gap:16px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);background:linear-gradient(180deg, color-mix(in srgb, var(--card) 90%, white), var(--card));padding:10px 14px;border-radius:12px;color:var(--text);box-shadow:var(--shadow)}
+    .btn:hover{transform:translateY(-1px)}
+    .btn.primary{background:linear-gradient(180deg, var(--accent), var(--accent-2));border-color:transparent;color:white}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding-block:48px}
+    .avatar{width:160px;height:160px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:grid;place-items:center;box-shadow:var(--shadow)}
+    .avatar span{font-size:56px;color:white;font-weight:800}
+    h1{font-size:42px;line-height:1.15;margin:0 0 12px}
+    .lead{color:var(--muted);font-size:18px;margin:0 0 18px}
+    .cta{display:flex;gap:12px;flex-wrap:wrap}
+
+    /* Sections */
+    section{padding-block:36px;border-top:1px solid var(--border)}
+    h2{font-size:28px;margin:0 0 16px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);padding:18px}
+    .card h3{margin:0 0 6px}
+    .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+    .tag{font-size:12px;border:1px solid var(--border);padding:4px 8px;border-radius:999px;color:var(--muted)}
+    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+    .gallery img{width:100%;height:160px;object-fit:cover;border-radius:12px;border:1px solid var(--border)}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+
+    footer{padding-block:40px;border-top:1px solid var(--border);color:var(--muted);text-align:center}
+
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .cards{grid-template-columns:1fr 1fr}
+      .gallery{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width:640px){
+      .cards{grid-template-columns:1fr}
+      .gallery{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="#top" class="logo" aria-label="Home"><strong>MR</strong></a>
+      <nav class="links">
+        <a href="#projects">Projects</a>
+        <a href="#photos">Photos</a>
+        <a href="#videos">YouTube</a>
+        <a href="#contact">Contact</a>
+        <a href="https://github.com/Maiguek" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="container">
+    <!-- HERO -->
+    <section class="hero" aria-label="Intro">
+      <div>
+        <h1>Miguel Ramírez</h1>
+        <p class="lead">AI & Robotics — Human–Robot Interaction, creative AI, and humanoid systems (Akira). I build tools and tell stories with code.</p>
+        <div class="cta">
+          <a href="#projects" class="btn primary">View projects</a>
+          <a href="#contact" class="btn">Contact</a>
+          <a href="https://www.youtube.com/@your-channel" class="btn" target="_blank" rel="noopener" aria-label="YouTube">YouTube</a>
+        </div>
+      </div>
+      <div style="display:grid;justify-items:center">
+        <div class="avatar" aria-hidden="true"><span>MR</span></div>
+        <small style="color:var(--muted);margin-top:10px">Replace with your photo</small>
+      </div>
+    </section>
+
+    <!-- ABOUT / WHAT I DO -->
+    <section id="about">
+      <h2>What I do</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Humanoid Robot — Akira</h3>
+          <p>Designing and building a social robot. Researching how AI + embodiment change our sense of the human.</p>
+          <div class="tags"><span class="tag">HRI</span><span class="tag">LLMs</span><span class="tag">Jetson</span></div>
+        </div>
+        <div class="card">
+          <h3>Creative AI & Video</h3>
+          <p>Short films and visual essays exploring human essence using diffusion and video models.</p>
+          <div class="tags"><span class="tag">GenAI</span><span class="tag">Story</span><span class="tag">Python</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Akira — Humanoid Robot</h3>
+          <p>A 3D‑printed humanoid with expressive face, speech, and perception. Used in 27 interviews for my thesis.</p>
+          <div class="tags"><span class="tag">Arduino</span><span class="tag">PCA9685</span><span class="tag">LLMs</span></div>
+          <p>
+            <a href="https://github.com/Maiguek/akira" target="_blank" rel="noopener">Code</a> ·
+            <a href="https://youtu.be/your-video" target="_blank" rel="noopener">Video</a> ·
+            <a href="#" target="_blank" rel="noopener">Paper</a>
+          </p>
+        </article>
+        <article class="card">
+          <h3>Gesture Learning</h3>
+          <p>Imitation learning for hand gestures synchronized with speech to improve robot social presence.</p>
+          <div class="tags"><span class="tag">BC</span><span class="tag">RL</span><span class="tag">Python</span></div>
+          <p>
+            <a href="https://github.com/Maiguek/gesture-learning" target="_blank" rel="noopener">Code</a> ·
+            <a href="https://youtu.be/your-video2" target="_blank" rel="noopener">Demo</a>
+          </p>
+        </article>
+        <article class="card">
+          <h3>AI Video — Human</h3>
+          <p>A mini‑series about human essence using diffusion models and playful motion design.</p>
+          <div class="tags"><span class="tag">Diffusion</span><span class="tag">ComfyUI</span></div>
+          <p>
+            <a href="https://github.com/Maiguek/human-essence" target="_blank" rel="noopener">Prompts</a> ·
+            <a href="https://youtu.be/your-video3" target="_blank" rel="noopener">Episode</a>
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- PHOTOS / GALLERY -->
+    <section id="photos">
+      <h2>Photos</h2>
+      <div class="gallery">
+        <img src="images/photo1.jpg" alt="Project photo 1 (replace)" />
+        <img src="images/photo2.jpg" alt="Project photo 2 (replace)" />
+        <img src="images/photo3.jpg" alt="Project photo 3 (replace)" />
+        <img src="images/photo4.jpg" alt="Project photo 4 (replace)" />
+      </div>
+      <small style="color:var(--muted);display:block;margin-top:8px">Drop your images in an <code>images/</code> folder and update paths.</small>
+    </section>
+
+    <!-- YOUTUBE -->
+    <section id="videos">
+      <h2>Latest Video</h2>
+      <div class="grid-2">
+        <div class="card">
+          <!-- Replace the src with your video embed link -->
+          <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;border:1px solid var(--border)">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border:0"></iframe>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Subscribe</h3>
+          <p>More build logs, idea sketches, and behind‑the‑scenes from my projects.</p>
+          <p><a class="btn" href="https://www.youtube.com/@your-channel" target="_blank" rel="noopener">Go to channel</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Say hello</h3>
+          <p>Best way is email. I read everything.</p>
+          <p>
+            <a class="btn" href="mailto:your.email@example.com">your.email@example.com</a>
+          </p>
+          <p>Or use the form:</p>
+          <!-- Optional: replace action URL with your Formspree endpoint to receive emails without a backend -->
+          <form action="https://formspree.io/f/your-id" method="POST">
+            <label>Name<br><input required name="name" placeholder="Your name" style="width:100%;padding:10px;border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--text)"></label><br><br>
+            <label>Email<br><input required type="email" name="email" placeholder="you@example.com" style="width:100%;padding:10px;border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--text)"></label><br><br>
+            <label>Message<br><textarea required name="message" rows="5" placeholder="Hi Miguel…" style="width:100%;padding:10px;border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--text)"></textarea></label><br><br>
+            <button class="btn primary" type="submit">Send</button>
+          </form>
+          <small style="color:var(--muted);display:block;margin-top:6px">Remove the form or use a backend (FastAPI/Flask) if you prefer.</small>
+        </div>
+        <div class="card">
+          <h3>Links</h3>
+          <ul>
+            <li><a href="https://github.com/Maiguek" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://x.com/your-handle" target="_blank" rel="noopener">X/Twitter</a></li>
+          </ul>
+          <h3 style="margin-top:16px">Resume</h3>
+          <p><a class="btn" href="/MiguelRamirez_Resume.pdf">Download PDF</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© <span id="year"></span> Miguel Ramírez — Built with plain HTML/CSS. Hosted on GitHub Pages.</div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Structured data (fill your actual info) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Miguel Ramírez",
+    "url": "https://maiguek.github.io",
+    "jobTitle": "AI & Robotics Researcher",
+    "sameAs": [
+      "https://www.youtube.com/@your-channel",
+      "https://github.com/Maiguek",
+      "https://www.linkedin.com/in/your-handle"
+    ]
+  }
+  </script>
+</body>
+</html>
