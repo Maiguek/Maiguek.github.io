@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="favicon.png">
   <title>Miguel Á. Ramírez Á. — Portfolio</title>
   <meta name="description" content="AI & Robotics portfolio — projects, videos, photos, and contact." />
   <!-- Basic SEO/Open Graph -->
@@ -197,36 +198,30 @@
       <div class="grid-2">
         <div class="card">
           <h3>Say hello</h3>
-          <p>Best way is email. I read everything.</p>
-          <p>
-            <a class="btn" href="mailto:your.email@example.com">your.email@example.com</a>
-          </p>
-          <p>Or use the form:</p>
-          <!-- Optional: replace action URL with your Formspree endpoint to receive emails without a backend -->
-          <form action="https://formspree.io/f/your-id" method="POST">
+          <p>Fill out the form below if you want to contact me.</p>
+          <!-- Formspree example: replace "your-id" with your actual Formspree form ID -->
+          <form action="https://formspree.io/f/mjkozlow" method="POST">
             <label>Name<br><input required name="name" placeholder="Your name" style="width:100%;padding:10px;border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--text)"></label><br><br>
             <label>Email<br><input required type="email" name="email" placeholder="you@example.com" style="width:100%;padding:10px;border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--text)"></label><br><br>
             <label>Message<br><textarea required name="message" rows="5" placeholder="Hi Miguel…" style="width:100%;padding:10px;border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--text)"></textarea></label><br><br>
             <button class="btn primary" type="submit">Send</button>
           </form>
-          <small style="color:var(--muted);display:block;margin-top:6px">Remove the form or use a backend (FastAPI/Flask) if you prefer.</small>
+          <small style="color:var(--muted);display:block;margin-top:6px">This form uses a secure backend service so your message is delivered privately.</small>
         </div>
         <div class="card">
           <h3>Links</h3>
           <ul>
             <li><a href="https://github.com/Maiguek" target="_blank" rel="noopener">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener">LinkedIn</a></li>
-            <li><a href="https://x.com/your-handle" target="_blank" rel="noopener">X/Twitter</a></li>
+            <li><a href="https://www.linkedin.com/in/maiguek" target="_blank" rel="noopener">LinkedIn</a></li>
           </ul>
           <h3 style="margin-top:16px">Resume</h3>
           <p><a class="btn" href="/MiguelRamirez_Resume.pdf">Download PDF</a></p>
         </div>
       </div>
     </section>
-  </main>
 
   <footer>
-    <div class="container">© <span id="year"></span> Miguel Ramírez — Built with plain HTML/CSS. Hosted on GitHub Pages.</div>
+    <div class="container">© <span id="year"></span> Miguel Á. Ramírez Á. — Built with plain HTML/CSS. Hosted on GitHub Pages.</div>
   </footer>
 
   <script>
